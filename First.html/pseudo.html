@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .A{
+            border: 2px solid black;
+            margin: 20px;
+        }
+        
+        h1{
+            color: rgb(32, 6, 6);
+            font-size: 30px;
+        }
+        .aa{
+            text-decoration: none;
+            padding: 20px;
+            margin: 20px;
+           }  
+        .aa:hover{
+        color: brown;
+        font-size: 30px;
+        font-style: italic;
+
+        }
+        .B{
+           border: 2px solid black;
+           margin: 20px;
+        
+        }
+        .bb:focus{
+            border-color: rgba(14, 236, 14, 0.34);
+            outline: none;
+        }
+        .C{
+            border: 2px solid black;
+            margin: 20px;
+        }
+        .cc{
+            text-decoration: none;
+            padding: 20px;
+            font-size: 20px;
+        }  
+        .cc:active{
+            color:rgb(15, 13, 16)
+        }
+        
+        .D{
+          border: 2px solid black;
+            margin: 20px;
+        }  
+        .dd{
+            text-decoration: none;
+            padding: 20px;
+            font-size: 20px;
+        }
+        dd:visited {color: rgb(16, 15, 15);}
+        
+        .E{
+            border: 2px solid black;
+            margin: 20px;
+        }
+    
+.ee {
+    display: none;
+}
+
+
+.check {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background: white;
+}
+
+
+.ee:checked + .check {
+    background: rgb(231, 90, 9);
+}
+
+.G{
+    border: 2px solid black;
+           margin: 20px;
+        
+}
+.gg:disabled { background: #f50a0a; }
+
+.king{
+    border: 2px solid black;
+            margin: 20px;
+}
+.as:nth-child(4) { color: red; }
+
+.php{
+     border: 2px solid black;
+           margin: 20px;
+}
+
+.sa:first-child { font-weight: bold; }
+
+.mnn{
+    border: 2px solid black;
+           margin: 20px;
+}
+.bpn:last-child { color: blue; }
+
+.kkl{
+    border: 2px solid black;
+           margin: 20px;
+}
+.klk:not(.special) { color: rgb(166, 21, 21); }
+
+.dds{
+    border: 2px solid black;
+           margin: 20px;
+}
+.ghg::before { content: "👉 "; }
+
+.ddf{
+     border: 2px solid black;
+           margin: 20px;
+}
+.yy::after { content: " ✅"; }
+.qq::after { content: " 👈🏻"; }
+.ui::after { content: " 👍🏻"; }
+.vvc::after { content: " 🤙🏻"; }
+.xx::after { content: " ✅"; }
+
+.bnb{
+    border: 2px solid black;
+           margin: 20px;
+}
+.asss::first-letter { font-size: 2em; color: red;}
+.sssa::first-letter { font-size: 2em; color: rgb(17, 0, 255); }
+
+.anku{
+    border: 2px solid black;
+           margin: 20px;
+}
+.shu::first-line { font-weight: bold; color: #f50a0a; font-size: 20px;}
+.fm{
+    border: 2px solid black;
+           margin: 20px;
+}
+.mf::selection { background: yellow; color: black; }
+
+.jjjk{
+     border: 2px solid black;
+           margin: 20px;
+}
+.htt::placeholder { color: rgb(244, 17, 17); }
+
+.za{
+    border: 2px solid black;
+           margin: 20px;
+}
+
+.hmk::marker { color: rgb(29, 231, 11); font-size: 20px; }
+.hmj::marker { color: red; font-size: 20px; }
+.hmn::marker { color: rgb(149, 174, 74); font-size: 20px; }
+.hml::marker { color: rgb(56, 9, 199); font-size: 20px; }
+
+.good{
+    border: 2px solid black;
+    margin: 20px;
+}
+.jai::backdrop { background: rgba(179, 10, 10, 0.5); }
+
+
+::backdrop {
+    background: rgba(0, 0, 0, 0.5);  /* Dim background */
+}
+
+/* Dialog style */
+dialog {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+}
+button{
+    padding: 10px 15px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="A">
+    <h1>Hover state</h1>
+    <p>Jab mouse element par hover kare tab style change hota hai</p>
+    <a class="aa" href="#">Home</a>
+    <a class="aa" href="#">Page</a>
+    <a class="aa" href="#">view</a>
+    <a class="aa" href="#">About</a>
+    </div>
+     
+    <div class="B">
+    <h1>Focus state</h1>
+    <p>Jab element (input, textarea) active/focused ho</p>
+    <input class="bb" type="text">
+     </div>
+
+    <div class="C">
+    <h1>Click state</h1>
+    <p>Jab element click ho raha ho</p>
+    <a class="cc" href="#">Menu</a>
+    <a class="cc" href="#">About</a>
+    </div>
+     
+    <div class="D">
+    <h1>Visited link</h1>
+    <p>Pehle visit kiya hua link ka style</p>
+    <a class="dd" href="#">Menu</a>
+    <a class="dd" href="#">About</a>
+    </div>
+
+
+    <div class="E">
+         <h1>Checkbox/Radio selected</h1> 
+            <p>Jab checkbox ya radio button select ho</p>
+    <label class="box">
+  <input class="ee" type="checkbox">
+  <span class="check"></span> Option
+
+</label>
+    </div>
+       
+
+    <button type="button" disabled>यह बटन डिसेबल है</button>
+<input type="text" value="इसे बदल नहीं सकते" disabled>
+<select>
+  <option value="1">विकल्प 1</option>
+  <option value="2" disabled>विकल्प 2 (डिसेबल)</option>
+</select><br><br><br>
+
+<button  type="button" disabled>This button is not useable</button>
+ <input type="text" value="this is not changeable"disabled>
+ <select>
+<option value="1">option 1</option>
+<option value="2" disabled>option 2 (disabled)</option>
+</select>
+
+
+
+    <div class="king">
+        <h1>Specific child</h1>
+        <p>Parent ke andar nth number ka child select karta hai</p>
+    <ul>
+        <li class="as">Item 1</li>
+        <li class="as"> Item 2</li>
+        <li class="as">Item 3</li>
+        <li class="as">Item 4</li>
+        <li class="as">Item 5</li>
+    </ul>
+    </div>
+   
+    <div class="php">
+    <h1>First child</h1>
+    <p>Pehla child element select hota hai</p>
+     <ul>
+        <li class="sa">Item 1</li>
+        <li class="sa">Item 2</li>
+        <li class="sa">Item 3</li>
+        <li class="sa">Item 4</li>
+        <li class="sa">Item 5</li>
+    </ul>
+    </div>
+
+    <div class="mnn">
+        <h1>Last child</h1>
+        <p>Jo element selector match nahi karte unko select karta hai</p>
+        <ul>
+            <li class="bpn">Item 1</li>
+            <li class="bpn">Item 1</li>
+            <li class="bpn">Item 1</li>
+            <li class="bpn">Item 1</li>
+        </ul>
+    </div>
+
+    <div class="kkl">
+        <h1>Negation</h1>
+        <p class="klk">Jo element selector match nahi karte unko select karta hai</p>
+         <p class="llk">Lorem ipsum dolor sit amet.</p>
+         <p class="jk">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam hic porro vel quae doloribus quia quos provident, nihil quidem earum obcaecati sint inventore perspiciatis pariatur fugit? Unde cum officia sed.</p>
+         <p class="kj">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum voluptas, debitis accusamus nemo perferendis dignissimos quod consectetur laborum aut praesentium odio corrupti laboriosam, sint quibusdam harum repellat maxime culpa rerum!</p>
+         <p class="jkj">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nesciunt aperiam? Dolore nam, distinctio tenetur repellendus obcaecati, deserunt neque laudantium alias nihil, hic a maiores. Possimus, asperiores dicta. Omnis, ducimus?</p>
+    </div>
+
+
+    <div class="dds">
+        <h1>Content before element</h1>
+        <p class="ghg">Element ke content se pehle extra content ya decoration add kare</p>
+        <p class="ggh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non ad facilis fugit, obcaecati deserunt iure mollitia corporis! Assumenda dolorum magnam ad quod sapiente totam architecto illum accusantium suscipit harum?</p>
+        <p class="hjj">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab error, commodi, odio earum incidunt aut dolores enim placeat libero voluptatibus veniam quibusdam perferendis eum aliquid delectus asperiores eos distinctio veritatis!</p>
+    </div>
+
+    <div class="ddf">
+        <h1>Content after element</h1>
+        <p class="yy">Element ke content ke baad extra content add kare</p>
+        <p class="qq">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab odio rerum minus ut doloremque autem tempora sit facilis, deleniti voluptatem assumenda dolorum quo nostrum, optio ea. Quas, eos? Velit, voluptates.</p>
+        <p class="ui">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, tempora hic sequi perspiciatis sint culpa perferendis necessitatibus aut ea amet rerum numquam maxime unde deserunt eos, minus saepe, cumque ratione.</p>
+        <p class="vvc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, excepturi. Laudantium repudiandae sit odit exercitationem blanditiis, veniam assumenda esse odio laborum? Laudantium sunt eum amet? Ab excepturi alias minus quas!</p>
+        <p class="xx">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, dignissimos! Eligendi voluptatem praesentium provident assumenda. Nihil neque harum praesentium saepe aperiam dolores corrupti illum, sequi deserunt sunt provident maxime similique.</p>
+    </div>
+
+    <div class="bnb">
+        <h1>First letter style</h1>
+        <p class="asss">Text ka pehla letter style kare</p>
+        <p class="sssa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam harum, nihil asperiores hic error dolore ut? Inventore dolores quam velit non, placeat suscipit odio facere illo expedita aperiam a!</p>
+    </div>
+
+    <div class="anku">
+        <h1>First line style</h1>
+        <p class="shu">Text ki pehli line ko style kare</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eum mollitia necessitatibus explicabo doloremque esse sapiente debitis ipsa beatae perspiciatis quam, animi deserunt obcaecati voluptas ducimus eveniet? Libero, quod id?</p>
+    </div>
+
+    <div class="fm">
+        <h1>Selected text style</h1>
+        <p>Input ke placeholder text ka style</p>
+        <p class="mf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis assumenda exercitationem aspernatur enim earum animi facilis. Porro, expedita est, quam natus voluptatibus, officiis fugit provident eaque eligendi inventore quaerat!</p>
+    </div>
+    
+    <div class="jjjk">
+        <h1>Placeholder style</h1>
+        <p>Input ke placeholder text ka style</p>
+         <label>Name:</label>
+        <input class="htt" type="text" placeholder="Enter your name" >
+    </div>
+     
+    <div class="za">
+        <h1>List bullet/number style</h1>
+        <p>List item ka marker style kare</p>
+    <ul>
+        <li class="hmk">Item 1</li>
+        <li class="hmj">Item 2</li>
+        <li class="hmn">Item 3</li>
+        <li class="hml">Item 4</li>
+    </ul>
+    </div>
+    
+
+
+<button onclick="box.showModal()">Open Fullscreen Box</button>
+
+<dialog id="box">
+    <p>Fullscreen backdrop activated!</p>
+    <button onclick="box.close()">Close</button>
+</dialog>
+       
+    
+</body>
+</html>

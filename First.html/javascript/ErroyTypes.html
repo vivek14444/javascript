@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+try {
+    let age = -5;
+    if (age < 0)
+    console.log("Age is not valid")
+    
+} catch (error) {
+   console.log("error caught:", error.message); 
+}
+finally{
+  console.log("Validation complete")
+}
+
+//1) Student Registration – required fields
+function registerStudent(s){
+try {
+    if (!s.name){throw new Error}("Name requred");
+    if (!s.roll){throw new Error}("Roll number required");
+    if (s.age < 5){throw new RangeError}("Age must be 5+");
+    return "Registered"
+} catch (error) {
+    console.log("Registration failed:", error.message);
+}
+}
+const student1 = {
+    name: "vivek",
+    roll: 101,
+    age: 10
+};
+console.log(registerStudent(student1));
+
+//2) Duplicate Roll Number check
+function ensureUniqueRoll(roll, existing){
+    if (existing.includes(roll)){throw new Error("Duplicate roll not allowed");}
+    }
+      try {
+        ensureUniqueRoll(101,[100, 101, 102]);
+      } catch (e) {
+        console.log("Error:", e.message);
+      }
+
+     // 3) Marks Entry (0–100 validation)
+
+     function saveMarks(marks){
+        try {
+           if (typeof marks !== "number"){throw new TypeError}("Marks must be number");
+            if (marks < 0 || marks > 100){throw new RangeError}("Marks 0-100 only");
+           console.log("Saved:", marks);
+        } catch (err) {
+            console.log("Marks error:", err.message);
+        }
+    }
+    saveMarks(80);
+    saveMarks("90");
+    saveMarks(150);
+
+  //  4) Grade Calculation + Fallback
+  function grade(m){
+    try {
+        if(m <= 0 || m < 100){throw new RangeError("Invalid marks")};
+        return m <= 90 ? "A" : m >=75 ? "B" : m >= 60 ? "C" : "D";
+
+    } catch (e) {
+        console.log("Using fallback grade due to error:" , e.message);
+        return "NA"
+    }
+  }
+  grade(90)
+
+  //5) Assignment Upload – file type check
+  function validateUpload(fileName) {
+    const ok = [".pdf", ".docx"];
+    if (!ok.some(ext => fileName.endsWith(ext))){
+        throw new Error("Only PDF/DOCX allowed");
+        
+    }
+  }
+  try { validateUpload("assignment.jpg");}
+  catch (e) { console.log("Upload blocked:", e.message); }
+
+   //6) Attendance JSON import
+   const json = '{"datab": "2025-08-12", "present": ["101", "102"]}';
+   try {
+    const data = JSON.parse(json);
+    console.log ("Attendance entries:", data.present.lenght);
+
+   } catch (er) {
+    console.log("Invalid attaendance file:", er.message);
+   }
+
+   //7) Timetable time format validate (HH:MM)
+     function parseTime(t){
+  if (!/^\d{2}:\d{2}$/.test(t)){throw new Error("Time must be HH:MM");
+  const [h, m] = t.split(":").map(Number);
+  if (h > 23 || m > 59){throw new Error("Invalid time");
+  return {h, m} 
+}
+try {
+   parseTime("25:90");} catch (e) {
+    console.log(e.message);
+}
+  }
+
+     }
+
+    
+
+
+     function parseTime(t) {
+  if (!/^\d{2}:\d{2}$/.test(t)) {
+    throw new Error("Time must be HH:MM:SS");
+  }
+
+  const [h, m] = t.split(":").map(Number);
+
+  if (h > 23 || m > 59 ||s < 45) {
+    throw new Error("Invalid time");
+  }
+
+  return { h, m ,s};
+}
+
+try {
+  parseTime("13:59:45");
+} catch (e) {
+  console.log(e.message); // Invalid time
+}
+
+   
+    </script>
+</body>
+</html>

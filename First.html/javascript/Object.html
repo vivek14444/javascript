@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //plain Object
+        let person = {
+          name: "Vivek",
+          age: 21,
+          city: "Bhopal"  
+        }
+        let persons = ["vivek", "bhopal", "21"]
+
+        console.log(persons[1])
+
+
+        console.log(persons["vivek"]);
+
+        console.log(person.name);
+        console.log(person.city);
+        console.log(person.age);
+
+      //Instance of Object
+     let user = new Object();
+      user.name = "Vivek"
+      user.city = " Bhopal"
+      console.log(user)
+
+      // Constructor Function Object
+      function Per(name, age, city){
+        this.name = name;
+        this.age = age;
+        this.city = city;
+      }
+      let p1 = new Per("Ankit", 23, "Bhopal");
+      console.log(p1)
+
+        let p2 = new Per("Vivek", 21, "Bhopal");
+        console.log(p2)
+
+        // Class-based Object
+        class Car {
+            constructor(model,color,shine,){
+                this.model = model;
+                
+            }
+        }
+        let c1 = new Car("BMW");
+        let c2 = new Car("seltos")
+
+        console.log(c2)
+        console.log(c1)
+
+        //Built-in Objects
+        let today = new Date()
+        console.log(today)
+
+        //Nested Objects
+        let student = {
+        name: "Anil",
+        address: { city: "Bhopal", pin: 461441 }
+        };
+        console.log(student)
+
+
+
+        // Object.keys(obj) → Keys ka array
+        let users = { name: "Vivek", age: 21}
+        console.log(Object.keys(users));
+
+        console.log(Object.values(users))
+
+       // Object.values(obj) → Values ka array
+       let Obj = {name: "Anil", age: 23}
+       console.log(Object.keys(Obj));
+       console.log(Object.values(Obj))
+
+       //Object.entries(obj) → [key, value] pairs ka array
+      let ent = {name: "Sumit", age: 42, city:"Indore"}
+      console.log(Object.entries(ent));
+      console.log(Object.values(ent));
+
+      // Object.assign(target, source) → Objects merge
+      let obj1 = { city: "Bhopal"};
+      let obj2 = { country: "India"};
+      let merged = Object.assign( {},user, obj1, obj2);
+      console.log(merged);
+
+      //Object.seal(obj) → Add/Delete not allowed, value change allowed
+
+
+
+
+     
+const salaries = {
+  Ram: 12000,
+  Shyam: 18000,
+  Mohan: 9000,
+  Sohan: 22000,
+  Aman: 15000,
+  Riya: 28000,
+  Neha: 24000,
+  Pooja: 20000,
+  Karan: 26000,
+  Rahul: 17000
+};
+ let firstmax = 0
+ let secandmax = 0
+ 
+ let firstperson = ""
+ let secondperson = ""
+
+ for(let names in salaries){
+  let salary = salaries[names];
+  console.log(salary)
+ // console.log(key,salaries[key])
+
+ if(salary> firstmax){
+  secandmax = firstmax
+  secondperson = firstperson
+  firstmax = salary
+  firstperson = names
+ }
+ else if(salary>secandmax && salary< firstmax){
+  secandmax = salary
+  secandperson = names
+ }
+
+ }
+ console.log(firstmax, firstperson, secandmax, secandperson)
+
+
+
+ const students = {
+Vivek: 75,
+Karan: 70,
+Mohit:60,
+Rohit: 88,
+Sumit:55,
+Shankar:64,
+Gourav: 95,
+Kunal:54,
+Mahak:88,
+ };
+
+ let firststud = 0
+ let secstud = 0
+
+ let firstrank = ""
+ let secrank = ""
+
+ for(let rank in students){
+  let sagar = students[rank]
+  console.log(sagar)
+
+  if(sagar> firststud){
+    secstud = firststud
+    secrank = firstrank
+    firststud = sagar
+    firstrank = rank
+  }
+}
+ console.log(firststud, firstrank, secstud, secrank)
+
+ const team = {
+  Virat: 56,
+  Rohit: 34,
+  Hardik: 76,
+  Rishavpant: 45,
+  shriyash: 67,
+  Dhoni:54,
+  Suman : 87,
+   };
+
+   let firstprice = 0
+   let secandprice = 0
+
+   let firstplayer = ""
+   let secandplayer = ""
+
+   for(let prices in team){
+    let cricket = team[prices]
+    console.log(cricket)
+    if(cricket> firstprice){
+      secandprice = firstprice
+      secandplayer = firstplayer
+      firstprice = cricket
+      firstplayer = prices
+
+    }
+   }
+   console.log(firstprice,firstplayer,secandplayer, secandprice);
+
+
+ </script>
+</body>
+</html>

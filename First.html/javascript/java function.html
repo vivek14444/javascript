@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function school(name1,rollno2,semester3){
+        console.log("Name: " + name1+ " Rollno: "+rollno2+" Semester: "+semester3)
+        
+     }
+     school("vivek","0501IS231063","5th");
+     school("suraj","0501IS231060","5th");
+     school("kunal","0501IS231023","4th");
+     school("Sudarshan","0501IS231059","3th");
+
+     function Parameters(Name = "Student"){
+       console.log(Name);
+     }
+     Parameters("vivek");
+      Parameters("Kunal");
+      Parameters();
+      Parameters("Raj");
+
+      //Rest Parameters
+
+      function sum(...nums){
+        return nums.reduce((a,b)=>a+b,0);
+      }
+      console.log(sum(1,2,3));
+
+      function classloop(...names){
+       // console.log(names);
+        for(i=0;i<names.length;i++){
+          console.log(names[i]);
+         // console.log(i);
+        }
+      }
+      classloop("vivek","suraj","kunal","ankit","anil","amit","sumit",)
+
+      //Callback Functions
+
+      function process(data,callback){
+        console.log(data);
+        callback(data);
+      }
+      process("vivek", process);
+      function process(data){
+        console.log("call back function "+data)
+      }
+
+    </script>
+</body>
+</html>

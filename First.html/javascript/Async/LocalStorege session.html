@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // localStorage
+
+        localStorage.setItem("name", "Vivek");
+        console.log(localStorage.getItem("name"));
+       localStorage.removeItem("name");
+        localStorage.clear();
+
+        localStorage.setItem("email", "rathor@12gmail.com")
+        console.log(localStorage.getItem("email"))
+
+       localStorage.setItem("address", "Rajiv nagar ");
+       console.log(localStorage.getItem("address"))
+
+
+    let name = {name: "Vivek", age: 21, number: 9575536090};
+     localStorage.setItem("studentinfo",JSON.stringify(name))
+       let store = localStorage.getItem("studentinfo")
+       let convert = JSON.parse(store) 
+       console.log(convert.name)
+       console.log(convert.age)
+       console.log(convert.number)
+
+       // EX REMOVE 
+       
+      let data = {file: "js"} ;
+      localStorage.setItem("delete", JSON.stringify(data));
+      localStorage.removeItem("delete")
+      console.log(localStorage.getItem("delete"));
+
+
+     let fruit = ["Banana", "Apple", "mango"];
+     localStorage.setItem("delete", JSON.stringify(fruit));
+     localStorage.removeItem("delete");
+     console.log(localStorage.getItem("delete"));
+
+
+      let student = ["Ankit", "Anil", "Anurag", "Amit"];
+     sessionStorage.setItem("removeinfo", JSON.stringify(student));
+    sessionStorage.removeItem("remove");
+     console.log(sessionStorage.getItem("remove"))
+
+// EXAMPLE NUMBER 2
+
+      localStorage.setItem("name")   
+     
+      
+
+      
+
+
+    </script>
+</body>
+</html>

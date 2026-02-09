@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //  1️⃣ Definition – Callback Function
+        function greet(name, Callback){
+            console.log("Hii" + name);
+            Callback(name);
+        }
+        greet(" Vivek ", greetmessage )
+        function greetmessage (name){
+            console.log("Callback function", name)
+        }
+
+        //Example of Call function
+        function greet1(name, callback) {
+  console.log("Hi " + name);
+  callback(name);
+}
+
+greet1("Amit", (name) => console.log("Welcome!",name));
+
+
+// Synchronous Callback
+[1, 2, 3].forEach(num =>console.log(num) 
+    
+);
+
+//3️⃣ Asynchronous Callback
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("After 2 Seconds");
+}, 1000);
+
+console.log("End")
+
+ //  4️⃣ Callback Hell
+ let user =  "aquib";
+
+ function doLogin(user, callback ){
+    console.log("Logging in:", user);
+    setTimeout(() => {
+        console.log(" Loging successful");
+        callback();
+    }, 1000);
+ }
+
+ function getUserData(user, callback){
+    console.log("Fetching data for:", user);
+    setTimeout(() => {
+        console.log("User data Received");
+        callback();
+    }, 2000);
+ }
+
+ function showDashboard(user, callback){
+    console.log("Loading dashboard for:", user);
+    setTimeout(() => {
+        console.log("Dashboard displayed");
+        callback();
+    }, timeout);
+ }
+     // callback hell
+    doLogin(user, () => {
+  getUserData(user, () => {
+    showDashboard(user, () => {
+      console.log("User Dashboard Loaded ");
+    });
+  });
+});
+
+
+// Step 1: Dummy Async Functions with Promise
+function doLogin(user){
+    return new Promise((resolve, reject) =>{
+        console.log("Logging in:", user);
+        setTimeout(() => {
+            console.log(" Loging successful");
+            resolve();
+        }, 1000);
+    });
+}
+
+   function getUserData(user){
+    return new Promise((resolve, reject ) =>  {
+        console.log("Fetching data for:", user);
+        setTimeout(() => {
+            console.log("User data received"); 
+            resolve();
+        }, 1000);
+    });
+   }
+
+   function showDashboard(user){
+    return new Promise((resolve, reject) => {
+     console.log("Loading dashbord for:", user);
+     setTimeout(() => {
+        console.log("Dashboard ready");
+        resolve();
+     }, 1000);
+    });
+   }
+
+   //Step 2: Using Promises
+
+   let user1 = "aquib";
+   doLogin(user1)
+   .then(() => getUserData(user1))
+   .then(() => showDashboard(user1))
+   .then(() => console.log("User1 Dashboard loaded"))
+
+   .catch(err => console.log("Error:", err));
+
+   // Step 3: Using Async/Await
+
+   async function name () {
+    try{
+        await doLogin(user);
+        await getUserData(user);
+        await showDashboard(user);
+        console.log("Vivek rathore ,  rathore");
+
+    }catch (err) {
+        console.log("Error, err");
+    }
+   }
+   name();
+
+     //1️⃣ Definition
+    const promise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Task done");
+    
+    } else{
+        reject("Task failed");
+    }
+});
+
+promise
+.then(result => {
+    console.log("Success:", result);
+})
+ .catch(error => {
+    console.log("Error:", error);
+ });
+
+
+
+
+//👉 Async/await se code readable aur clean ban jaata hai.
+async function loadUser() {
+  try {
+    let res = await fetch("https://jsonplaceholder.typicode.com/users/1");
+    let data = await res.json();
+    console.log("User:", data.name);
+  } catch (err) {
+    console.log("Error:", err);
+  } finally {
+    console.log("Process finished ✔");
+  }
+}
+loadUser();
+
+
+    </script>
+</body>
+</html>

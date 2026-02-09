@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Person {
+      constructor(name){
+        this.name = name;
+      }
+      great(){
+        console.log(`${this.name}`);
+      }
+      static info(){
+        return "This is Person class";
+
+      }
+       } 
+
+       class Student extends Person {
+        constructor(name, roll) {
+            super(name);
+
+        }
+       }
+       const s1 = new Student("Vivek", 101);
+       s1.great();
+      console.log(Student.info());
+
+
+    //  1. Class & Object 
+    class Car {
+        constructor(name, model){
+            this.name = name;
+            this.model = model;
+
+        }
+    }
+
+    const c1 = new Car("BMW", "X5");
+    const c2 = new Car("Tata", "Safari");
+
+    console.log(c1.name, c1.model);
+    console.log(c2.name, c2.model);
+
+   //  2. Constructor
+
+   class Student1{
+    constructor(name, roll, email, num){
+        this.name = name;
+        this.roll = roll;
+        this.email = email;
+        this.num = num;
+    }
+   }
+
+   const stu1 = new Student1("Vivek", 32, "rathore@123",956748394 );
+   console.log(stu1.name, stu1.roll, stu1.email, stu1.num);
+
+   //3. Methods
+   class Calculater{
+add(a,b){
+    return  a + b;
+}
+multi(a, b){
+    return a*b;
+
+}
+division(a, b){
+  return a/b;
+
+   }
+   minus(a,b){
+    return a-b;
+   }
+}
+   const calc = new Calculater();
+ 
+
+   console.log(calc.add(5,3));
+   console.log(calc.multi(4, 4));
+   console.log(calc.minus(5,3))
+   console.log(calc.division(4, 6))
+
+  // 4. Static Methods
+  class School {
+    static schoolName(){
+        return "DAV Public School";
+
+    }
+  }
+  console.log(School.schoolName());
+
+ // 5. Inheritance (extends) + super()
+    class Person1 {
+   constructor(name) {
+    this.name = name;
+  }
+}
+
+  class Student5 extends Person1 {
+    constructor(name, roll) {
+    super(name);  
+    this.roll = roll;
+  }
+}
+
+    const s3 = new Student5("Ravi", 101);
+    console.log(s3.name, s3.roll);
+
+   //6. Polymorphism
+   class Animal {
+   speak() {
+   console.log("Some sound");
+  }
+}
+
+    class Dog extends Animal {
+    speak() {
+    console.log("Bark");
+  }
+}
+
+   class Cat extends Animal {
+   speak() {
+    console.log("Meow");
+  }
+}
+
+   const d = new Dog();
+   const c = new Cat();
+   d.speak(); 
+   c.speak(); 
+
+   //7. Encapsulation
+     class Bank {
+        #balance = 0;
+        deposit(amount) {
+            this.#balance += amount;
+
+        }
+        getBalance(){
+            return this.#balance;
+        }
+     }
+     const b = new Bank();
+     b.deposit(1000);
+     console.log(b.getBalance());
+
+    //  8. Abstraction
+    class Account {
+        deposit(){
+            throw "Method not implemented";
+
+        }
+    }
+    class SavingsAccount extends Account {
+        deposit(amount) {
+            console.log(`{amount} deposited in Saving Account `);
+
+        }
+    }
+    class CurrentAccount extends Account {
+        deposit(amount){
+            console.log(`{amount} deposited in Current Account `);
+
+        }
+    }
+     
+    let s = new SavingsAccount();
+    let C = new CurrentAccount();
+
+    s.deposit(2000);
+    C.deposit(4212);
+
+
+    // Example 1
+    class Payment {
+       pay(){
+       throw "Method not implemented";
+       
+       } 
+    }
+    class UPIPayment extends Payment {
+        deposit(pay){
+            console.log(`{pay} Deposited for UPI Payment `);
+        }
+    }
+     class CardPayment extends Payment {
+        deposit(pay){
+            console.log(`{pay} Deposited for Card Payment `);
+        }
+    }
+    let u = new UPIPayment();
+    let C1 = new CardPayment();
+
+    u.deposit(8000);
+    C1.deposit(7900);
+
+ </script>
+</body>
+</html>

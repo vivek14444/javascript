@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+      background-color: lightgray;
+      font-size: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+    @media screen and (min-width:600px){
+    body{
+      background-color: lightgrey;
+    }
+    }
+    @media not print{
+      h1{
+        color: darkgreen;
+      }
+    }
+    @media (max-width:500px),(orientation: portrait){
+      body{
+        background: pink;
+      }
+    }
+  
+    </style>
+</head>
+<body>
+    <h1>Media Qurey Logical Operators</h1>
+    <p>Resize window, oreintation change, ya print privew open karke changes check karo</p>
+</body>
+</html>

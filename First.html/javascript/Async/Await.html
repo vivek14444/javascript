@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>JavaScript Async/Await - Student Search </h1>
+
+       <input type="text" id="saerch" placeholder="Enter roll no">
+       <button onclick="rollnumberfind()">Search</button>
+
+       <p id="out"></p>
+
+
+     <h1>Player score </h1>
+     <input type="text" id="var" placeholder="Enter score">
+     <button onclick="runfind()">Search</button>
+
+     <p id="values"></p>
+ 
+ <script>
+    const students = [
+        {rollno: 101, name: "Vivek", course: "Fullstack"},
+        {rollno: 102, name: "Ankit", course: "react"},
+        {rollno: 103, name: "Anil", course: "java"},
+        {rollno: 104, name: "Sumit", course: "python"},
+        {rollno: 105, name: "Anurag", course: "HTML"},
+        {rollno: 106, name: "Sneha", course: "CSS"},
+        {rollno: 107, name: "Seema", course: " C++"}
+
+   ];
+
+    // Promise function
+    function getstudent(rollno){
+        return new Promise ((resolve, reject) => {
+            console.log("Searching Roll No:", rollno);
+            setTimeout(() => {
+                let student =  students.find(s => s.rollno === rollno);
+                if (student){
+                    resolve(student);
+
+                } else{
+                    reject("Student not found with roll no " + rollno);
+
+                }
+            }, 2000);
+        });
+    }
+
+         // Async/Await function
+
+     async function rollnumberfind(){
+        let roll = Number(document.getElementById("saerch").value);
+        let out = document.getElementById("out");
+
+        try {
+           let data = await getstudent(roll);
+           out.innerText = `student found: ${data.name} {Roll No: ${data.rollno}} - Course: ${data.course}`;
+
+        } catch (error) {
+            out.innerText = error;
+
+        } finally {
+            console.log("Database Search FInished");
+        }
+     }
+
+
+     //Example
+
+     const perform = [
+      {run: 67, name: "Suman", over: 7},
+      {run: 99, name: "Virat", over:9},
+      {run: 53, name: "Rohit", over: 6},
+      {run: 89, name: "Dhoni", over:7},
+      {run: 78, name: "Hardik", over:6}
+     ];
+
+     function getperform(run) {
+        return new Promise((resolve, reject) =>{
+            console.log("Search run:", run);
+           setTimeout(() => {
+            let performs = perform.find(r=> r.run === run);
+
+            if (performs){
+                resolve(performs);
+            }else {
+                reject("Player not found with run " +  performs);
+            }
+           }, 2000); 
+        });
+     }
+
+
+     async function runfind(){
+        let run = Number(document.getElementById("var").value);
+        
+        let values = document.getElementById("values");
+      
+        try {
+            
+           let data = await getperform(run); 
+           values.innerText =`Run Found: ${data.name} {Run No: ${data.run }} - over: ${data.over}`;
+           console.log(data);
+        } catch (err) {
+           values.innerText = err; 
+          // console.log(err)
+        }
+     }
+     
+     
+ </script>
+</body>
+</html>

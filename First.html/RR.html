@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+              border: 2px solid;
+              background-color: rgb(33, 6, 58);
+              padding: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 20px;
+     
+        }
+        img{
+            width: 80px;
+            border-radius: 10px;
+        }
+     
+        p{
+                margin-top: 6px;
+             font-size: 14px;
+             letter-spacing: 1px;
+             color: aliceblue;
+
+            
+        }
+        .Searchbox{
+            
+            width: 250px;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+        }
+        .Searchbox:hover{
+            background-color:  yellow;
+        }
+        button{
+             border-radius: 20px;
+             font-size: 20px;
+             gap: 20px;
+        }
+        .button:hover{
+            
+        }
+        .menu{
+            display: flex;
+            gap: 50px;
+            font-size: 20px;
+            
+         }
+        .aa{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+     .aa:hover{
+        color: brown;
+        font-size: bold;
+         }     
+    .King{
+        height: 400px;
+        background-color: aquamarine;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+    .King h2{
+        color: black;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .King p{
+        color: black;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .King button{
+        padding:12px 25px;
+        border:none;
+        background:#fca311;
+        font-size:16px;
+
+    }
+    .products{
+padding:50px 40px;
+}
+
+
+.products h2{
+text-align:center;
+margin-bottom:30px;
+font-size:32px;
+}
+
+
+.product-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+
+.product{
+background:#fff;
+padding:20px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 0 10px rgba(179, 31, 31, 0.1);
+}
+
+
+.product img{
+width:100%;
+height:180px;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+
+.product h3{
+margin-bottom:8px;
+}
+
+
+.product p{
+margin-bottom:10px;
+color:#555;
+}
+
+
+.product button{
+background: rgb(46, 10, 80);
+color: white;
+border:none;
+padding:8px;
+/* cursor:pointer; */
+}
+    .about{
+background:#fff;
+padding:50px 40px;
+}
+
+
+.about h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+
+.about p{
+max-width:800px;
+margin:auto;
+text-align:center;
+font-size: large;
+color: rgb(15, 15, 15);
+}
+
+
+.contact{
+padding:50px 40px;
+}
+
+
+.contact h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+
+.contact form{
+max-width:500px;
+margin:auto;
+}
+
+
+.contact input, .contact textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+}
+
+
+.contact button{
+width:100%;
+padding:10px;
+background:#fca311;
+border:none;
+font-size:16px;
+}
+    </style>
+</head>
+<body>
+    <header>
+   
+    <div class="logo area">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACUCAMAAAA02EJtAAAAnFBMVEX///8RFCcAAADAwMEPFSUAAB36+vtjY2L///0ACBxFRk3j5OQSEyeUlJkAABUAABjNzdGDg4gAAA4AAAb09PS5ubwMDiWwsLEACCLd3d8MDSerq69jY2wABR0uLTPT09QnJzaMjJAMDBoVFR8mJzFxcXUzMUAcGyQ5OkJ7e31ZWmJOTlXr7O4eHi2bm5xjZGgZGRtRUmB5eYNWVlfO9lxtAAAE7UlEQVR4nO2aW3uqOhCGIQibaiQQEEGq1jMq1a76///bDoqaQW1xPcvkZt4LL0ypH8lkTolhIAiCIAiCIAiCIAiCIAiCIAiCIIhEaj3HuBOJp1wtUil5BvbR3k+sSIfSUitrNcccvjE2nQWpo0OrP0/MJ4lDshjr0Jrx+FmtZsw/JjrMoEue1UrN1oDPUg1aA48+Pa+mafO+eouNFuQvpJrJrKtcqhHthb0+P7Mx0aDVCKbsL4wg5n310cDtLYn9vCdI5mMdoSvbrjyPvf3IjVaWq/dZrms4fne92bZ/YOmRup2QiXKpJ5yi8xPpuL8hDEgdrHS412YU+9lQ1uqtdSt6hNhEvaUte4FPLenA77jCpo2U21eLpWSnJ39tRkqlbCz5eKkTcBrw0/P9qewEXmoB0eG/X1lM+sWj552NZK4vtQDX8D3P/g0v5H8eFSe+lOCw7SuN1TV6qwZhNGZk79//Dx9Xa02WL04Gd6RRfuKt7mdP6/DyeLx6aCj/iEmzJDUmi3tG0Lu+afz18oD1zVuNxIaLOwtsXV80nj0wkn9HsfWaKKWUBLf7RtpXdPpyqUbUblJUUaH11l7BrCoIrWnOGtiAeJ1Vv/5oJkl9va0KrFWzfsXwxhzfuUIPcNLaunGvtFzyGmZC4MxFYesi1c5VKAULWcHvd9byFD52tXK2VyPVCGqhIA66d5n0JJdVHOQcIFOUBToBB8vvbRuEyUBei7CjRqprRPtQnldaRif3BvBI5l0snFL2x1EzqUJEMeJAK/+tZ9KTeofC6WZKhBpHrZ1cKkDMux6/+tvyo7MmA+nN7LbSktX/lH9cZCi9h9aXZnkItiFT2rdyRZiU3SsdzM8eP7J8id7uPbdBaS2iqhL/L5FNgVb7rNUJgHMN7dgEoXggFkAxTpdT2V5Z3jkNROuw9ThPoPzdcdWW1q7hLGAo8DZVQh1tw8FDpUzsKcVSSzYgFJj8vTi9RNRm9H6uSO3R2NAhtTjATDv8rgbGwJdJSt+4r6Wx4hrpCGaEor4/Dfizu9Ut+7J0TOmRdDoE03eJQ9bt0VarFR70tStdowf7kcncqoaymyrMDr8LrW21jMtuk9rmeeImcM+ZSW5pOWaV2MFM2/6s3Kuxrg28azq+lqidtrFNFTejTQj97t1GhlKKPbABky+cKqGq+7JA2/a/aD14MNNeV0aZtuGBhZajQEhnbgNJfFdN3pgBv0vZTXNAOTVJAzs7LrXwZR4YsGe+dhuoNQdiYpXm6pZaQao4JFqOLQFylW+2qL0S+dPxcAU2ZUVipahYfYhrTEgMQsGlfoKpIvX2qmuAGmKiJgwWsYdSkpjWaAFcFiUbve61lLSHVUG4d07Ha8W25ssCTTfErkRL2Hs9ShIGaxQE+DIa6j4MLJsDDErqVi5rPIKpIlfWsnhI7a5YzI9dNLdsyoJiK5lauk2gnlDH/JK9wotZ5a0Qvbj13msy8quBLmyw2Ln+6wvlvTbJv7L87EUDEssOgm+1Z4TGjg9BI2NZfe8EBOwtvtUq80iv7cXy9J2Sf+EKal22cK27fhEp4YSTZDAo5Yolp15wlFRetQgIGcTm6YzDjKc73UqFqqKbz5jHmOeVH+fLSiIapMHoix2/F3CiP3stSfuT4MyiIw2Ms+vAWnPmgiAIgiAIgiAIgiAIgiAIgiAIgiDP8j/YKljhnEqEQwAAAABJRU5ErkJggg==" alt="">
+           <p>Electronic</p>
+      </div>    
+  
+         <div>
+            <input class="Searchbox" type="text" placeholder="Search baar" >          <button>Search</button>
+         </div>
+
+         <div class="menu">
+            <a class="aa" href="#">Home</a>
+            <a class="aa" href="#">Service</a>
+            <a class="aa" href="#">Contact</a>
+         </div>
+    </header>
+
+    <section class="King">
+        <div>
+            <h2>Best Electronics Store</h2>
+            <p>Quality products with trusted service</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+   <section class="products">
+       <h2>Our Products</h2>
+        <div class="product-box">
+          <div class="product">
+             <img src="https://tse3.mm.bing.net/th/id/OIP.UcFRyeWPLwufFWBXDHbBOQHaFS?pid=Api&P=0&h=180">
+        <h3>LED TV</h3>
+        <p>High quality display</p>
+        <button>View</button>
+     </div>
+             <div class="product">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.ItyEWfwgW8YqEEs8jkjWyQHaHa?pid=Api&P=0&h=180">
+            <h3>Refrigerator</h3>
+        <p>Energy efficient</p>
+        <button>View</button>
+    </div>
+    <div class="product">
+             <img src="https://tse3.mm.bing.net/th/id/OIP.CGR-X4LnUCHlHgvOQViI0QHaEK?pid=Api&P=0&h=180">
+            <h3>Washing Machine</h3>
+        <p>Best performance</p>
+        <button>View</button>
+    </div>
+    </div>
+    </section>
+
+     <section class="about">
+         <h2>About Us</h2>
+         <p>
+            Rathore Electronics ek trusted electronics store hai jahan aapko best quality ke
+            tronic products affordable price me milte hain.
+         </p>
+     </section>
+  
+     <section class="contact">
+        <h2>Contact us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+            <button>Send Message</button>
+        </form>
+
+     </section>
+      <footer>
+        <p>© 2025 Rathore Electronics | All Rights Reserved</p>
+      </footer>
+   
+</body>
+</html>

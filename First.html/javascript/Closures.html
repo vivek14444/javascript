@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Basic Closure Example
+        function outer(){
+            let count = 0;
+            function inner(){
+            count++;
+            return count;    
+            }
+            return inner;
+        }
+        const counter = outer();
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+       //Lexical Scope Example
+       function outer1(){
+        let name = "Vivek Rathore";
+        function inner(){
+            console.log(name);
+         }
+         inner();
+       }
+       outer1();
+
+     
+    // Private Variable Example
+     function bank() {
+    let balance = 1000; 
+
+    return {
+        deposit(amount) {
+            balance += amount;
+            return balance;
+        },
+        getBalance() {
+            return balance;
+        }
+    };
+}
+
+       const myAcc = bank();
+       console.log(myAcc.deposit(500)); 
+       console.log(myAcc.getBalance()); 
+       console.log(myAcc.balance);      
+
+    //Factory Function Example
+    
+     function multiplier(factor) {
+    return function(num) {
+        return num * factor;
+      };
+    }
+
+      const double = multiplier(2);
+      const triple = multiplier(3);
+
+      console.log(double(5)); // 10
+      console.log(triple(5));
+
+
+    </script>
+</body>
+</html>

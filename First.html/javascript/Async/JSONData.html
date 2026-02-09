@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student object</h1>
+    
+     <div id="result"></div>
+    <button onclick="sumbit()">Sumbit</button>
+    <input id="name" type="text"  >
+    <input id="email" type="email" >
+    <button onclick="PostAPI()">PostAPI</button>
+    <script>
+        const student = {
+            name : "Vivek Rathore",
+            age : 25
+        };
+        const jsonData = JSON.stringify(student);
+        console.log(jsonData);
+
+       const jsonString = '{"name":"Ankit", "age":26}' ;
+       const studentObj = JSON.parse(jsonString);
+       console.log(studentObj.name);
+
+
+       // Example 1
+
+       const bestplayer = {
+       name: "Virat",
+       age: 56
+       };
+       const jsonData1 = JSON.stringify(bestplayer);
+       console.log(jsonData1);
+
+
+       // Example 2
+
+       const jsonString3 = '{"name": "Rohit", "age": 64}';
+    const PlayerObj = JSON.parse(jsonString3);
+    console.log(PlayerObj.name);
+
+    // Example 3
+
+    const jsonString2 = '{"name": "HP leptop", "Price": 56000}';
+    const ProductObj = JSON.parse(jsonString2);
+    console.log(ProductObj.Price);
+
+    // Example 4
+ const student1 = [
+    {name: "VIvek", Marks: 76},
+    {name: "Ankit", Marks: 64}
+];
+  const studentJSON = JSON.stringify(student1);
+  const studentObj1 = JSON.parse(studentJSON);
+
+  console.log(studentObj1[1].Marks);
+
+  // 🔹 POST Request (Data Send Karna)
+let Go = document.getElementById("result");
+  function sumbit(){
+ fetch("https://jsonplaceholder.typicode.com/users")
+ .then(res => res.json())
+ .then(data =>{ console.log(data)
+ // Go.innerHTML = data[0].name + " , " + data[.0].email
+
+ Go.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+         Go.innerHTML += `<p>Name: ${data[i].name} Email: ${data[i].email} Address: ${data[i].address}</p>`
+        
+    }
+ })
+
+ .catch(err => console.log(err));
+  }
+
+  function PostAPI(){
+    let name = document.getElementById("name").value
+    let email = document.getElementById("email").value
+    fetch("https://jsonplaceholder.typicode.com/users",{
+
+    method: "POST",
+
+    headers:{
+        "Content-Type" : "application/json"
+    },
+    body: JSON.stringify({
+        name: name,
+        email: email
+    })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+}
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+ 
+    
+    
+</head>
+<body>
+    <button id="btn">click me </button>
+   
+    <script>
+       // 1️⃣ Call Stack (Nested Functions)
+       function first(){
+        second();
+        console.log("First Done");
+       }
+       function second(){
+        third();
+        console.log("Second Done");
+       }
+       function third(){
+        console.log("Third Done")
+       }
+      second();
+
+    //  2️⃣ Event Loop with Multiple Tasks
+
+    console.log("Start");
+    setTimeout(() => console.log("Timeout 1"),);
+    setTimeout(() => console.log("Timeout 2"),);
+
+    Promise.resolve().then(() =>console.log("Promise 1") );
+    Promise.resolve().then(() => console.log("Promise 2"));
+
+    console.log("End");
+
+    // 3️⃣ setTimeout vs Promise
+    setTimeout(() => console.log("setTimeout"), 1);
+
+    Promise.resolve().then(() => console.log("Promise") );
+
+    
+        //  4️⃣ setInterval with Counter
+        let count = 0;
+        let id = setInterval(() =>{
+            count++;
+            console.log("Ping:", count);
+            if (count === 3) clearInterval(id);
+        }, 1000); 
+
+       // 4️⃣ setInterval with Counter
+
+       for (let i = 1; i <= 3; i++){
+        Promise.resolve().then(() => console.log("Promise", i));
+       }
+   
+    // 6️⃣ Task Queue with DOM Event (Browser Example)
+
+    document.getElementById("btn").addEventListener("click", () => {
+        console.log("Button Clicked (Macrotask)");
+    });
+
+    //1. Resize Window Example
+    const debounce = (fn, delay) => {
+        let timer;
+        return (...args) => {
+            clearTimeout();
+            timer = setTimeout(() => fn.apply(this, args), delay);
+        };
+    };
+    window.addEventListener("resize", debounce(() => {
+        console.log("Window resized");
+    }, 300));
+
+
+    
+    function debounc(fn, delay) {
+        let timer;
+        return function (...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => fn.apply(this, args), delay);
+
+        };
+    }
+    const onSearch = debounc(() => console.log("Searching..."), 500);
+
+    
+     // 2. Button Click Example
+
+     function throttle(fn, limit) {
+        let lastCall = 0;
+        return function (...args) {
+            if (Data.now() - lastCall >= limit){
+                lastCall = Data.now();
+                fn.apply(this, args);
+            }
+        };
+     }
+     const onScroll = throttle(() => console.log("Scrolling..."), 1000);
+
+     // 3️⃣ Mark-and-Sweep
+     function createObj(){
+        let temp = { msg: "Hello"};
+
+     }
+     createObj();
+    </script>
+       </style> 
+</body>
+ 
+</html>

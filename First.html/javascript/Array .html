@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruites = ["Apple", "orange", "Banana", "Mango"]
+           console.log(fruites[0]);
+
+          let tpye = ["10","20","30","40",] 
+          console.log(tpye[2]);
+
+          let mixed = [ 1, "Hello", true, {name: "raj"},[10,20]];
+          console.log(mixed[3])
+
+          let matrix = [
+            [1, 2, 3],
+            [4, 5, 6]
+          ];
+          console.log(matrix[1][0]);
+
+         let typed = new Int16Array([10, 20, 30]); 
+         console.log(typed[2]);
+
+         //3. Array ka Use Kyu Karte Hain?
+
+         let student = ["vivek", "ankit", "anil", "sumit"]
+         student.push("amit");
+         console.log(student)
+
+         let child = ["vivek", "ankit", "anil", "sumit"]
+         child.unshift("anurag");
+         console.log(child)
+
+         //Remove elements
+         let Remove = ["vivek", "ankit", "anil", "sumit"]
+         Remove.pop("aakash");
+         console.log(Remove);
+
+          let vivek = ["vivek", "ankit", "anil", "sumit"]
+         vivek.shift("aakash");
+         console.log(vivek);
+
+        // Search element (value based)
+        let index = ["vivek", "ankit", "anil", "sumit","vivek"]
+        
+        //Check type
+
+        Array.isArray()
+        console.log(Array.isArray([1,2,3]));     //true
+         console.log(Array.isArray("hello"));    //false
+        
+         
+
+        //Modify original array
+         Array.of()
+        console.log(Array.of(1, 2, 3)); // [1, 2, 3]
+
+       
+        let noo = [1, 12, 11, 13, 14]
+       let evens = noo.filter(n=> n % 2=== 0)
+       console.log(evens);
+
+        let sum = noo.reduce(( acc,curr)=> acc + curr,0);
+        //0 + 1 = 1
+         //1 + 2 = 3
+          //3 + 3 = 6
+           //6 + 4 = 10
+            //10 + 5 = 15
+             //15 + 6 = 21
+              //21 + 7 = 28
+               console.log(sum);
+
+          // Adding & Removing  
+           
+           let num = [10, 20, 30, 20, 40];
+
+        let players = [
+  {
+    name: "Virat",
+    scores: [45, 60, 80, 72, 55, 90, 66, 40, 88, 70]
+  },
+  {
+    name: "Rohit",
+    scores: [30, 70, 50, 85, 40, 65, 90, 55, 60, 75]
+  },
+  {
+    name: "Rahul",
+    scores: [20, 40, 60, 35, 50, 45, 70, 30, 55, 65]
+  }
+  ,{
+    name: "Ankit",
+    scores: [35,40,46,50,70,55,44,54,56,34,]
+  }
+];
+    players.forEach(player=> {
+        let total = player.scores.reduce((acc,curr)=> acc+curr);
+    //    console.log(players.name+ " Total Score " +score );
+      let average = total/player.scores.length;
+      console.log(total,average)
+    //  console.log(player.scores.length) 
+     
+    let performance="";
+    if(average>=75 ){
+  
+     console.log(" Name " + player.name + " Total run; " + total + " Average; " + average + " Very good performance ")
+    }
+    else if(average>=50){
+     console.log( " Name " + player.name +  " Total run; " + total + " Average; " + average + " good performance ")
+    }
+    else if(average>=30){
+       console.log( " Name " + player.name +  " Total run; " + total + " Average; " + average + " Average performane ")
+    }
+    })
+
+
+       </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Arrow Functions
+        const add = (a, b) => a + b ;
+        console.log(add(5, 3));
+
+       //Template Literals
+       let name = "Vivek";
+       let city = "Bhopal";
+       console.log('Hello, ${name} from ${city}!');
+
+       let student = ["Amit", "vivek", "Ankit"]
+       let stu1 = student[0]
+       let stu2 = student[1]
+       let stu3 = student[2]
+       console.log(stu1, stu2, stu3)
+
+       let [stu4, stu5,stu6] =["Amit", "vivek", "Ankit"]
+       console.log(stu4, stu5, stu6)
+
+       //Destructuring
+       // Array destructuring
+
+       const [x, y] = [10, 20];
+       console.log(x, y);
+
+       // Object destructuring
+       const {names, age} = {names:"Vivek", age:21};
+       console.log(names, age);
+
+      // Spread Operator (...)
+      let arr1 = [1, 2, 5, 6];
+      let arr2 = [...arr1, 4, 6, 7, 9]
+      console.log(arr2);
+
+      let Name = ["Vivek", "Sumit", "Gourav"];
+      let Names = [...Name, "Sumit", "Shankar", "Kunal"];
+      console.log(Names)
+
+     // Rest Parameters (...)
+     function sum(...nums){
+        return nums.reduce((a, b) => a + b, 0);
+     }
+     console.log(sum(1, 2,  4, 5));
+
+     function multi(...num){
+        return num.reduce((a, b) => a*b, 1);
+     }
+     console.log(multi(4,6,7));
+
+     function div(...number){
+       return number.reduce((a, b) =>a/b, );
+     }
+     console.log(div(10,2))
+
+     //Default Parameters
+
+      function greet(name="Guest"){
+        console.log(`HI, ${name}`);
+      }
+      greet();
+      greet("Amit")
+
+      //Object Property Shorthand
+      let nam = "Amit";
+let ages = 25;
+
+let user = {
+  name: name,
+  age: age
+};
+console.log(nam,ages)
+
+//New Method
+let users = {name, age};
+console.log(users);
+
+     //A. Advanced Array Destructuring Questions
+// Nested Array Destructuring
+   const arr = [1, [2, [3, [4,]]]];
+   const [a, [b, [c, [d, ]]]] = arr;
+   console.log(a, b, c, d, );
+   
+   // Q2. Destructure & Swap Multiple Variables
+      let aa = 1, bb = 2, cc = 3;
+      [aa, bb, cc] = [cc, aa, bb];
+      console.log(aa,bb,cc)
+
+    //  Q3. Destructure with Rest & Default
+       const nums = [10];
+      const [x1 = 5, y1= 15, ...rest] = nums;
+
+     console.log(x1, y1, rest);
+
+     // Q4. Use Destructuring in Loops
+
+     const users1 = [
+      {id: 1, name: "Vivek "},
+      {id: 2, name: "Seema"} 
+     ];
+
+     for (const { id, name } of users1){
+      console.log(`${id} ${name}`);
+     }
+
+     //B. Advanced Object Destructuring Questions
+     //Q5. Nested Object Destructuring
+
+     const student1 = {
+       name: "Anjali",
+       marks1: {
+       math: 94,
+       science:90
+       }
+     };
+
+     const {marks1: {math, science }} = student1;
+     console.log(math, science);
+
+   //   Q6. Rename + Default Value Together
+const users2 = { name: "Priya" };
+const { name: fullName, age1 = 22 } = users2;
+
+console.log(fullName, age1);
+
+//Q7. Rest Operator in Objects
+const emp = { id: 1, name: "Ravi", role: "Dev", salary: 50000 };
+const { id, ...restDetails } = emp;
+
+console.log(id);          
+console.log(restDetails); 
+
+//Q8. Computed Property Keys
+
+const key = "city";
+const use = { name: "Vivek", city: "Bhopal"};
+const {[key]: location1} = use;
+console.log(location1)
+
+//Q9. Dynamic Rename in Destructuring
+
+const obj = {salary: 80000};
+const {salary: income } = obj;
+console.log(income);
+
+//C. Mixed Destructuring Questions
+//Q10. Array of Objects Destructuring
+
+const stud = [
+  {name: "Ravi", score: 85},
+  {name: "priya", score: 92}
+];
+   const [{name: firstName }, { score: secondScore }] = stud;
+   console.log( secondScore, firstName);
+
+   // Q11. Object with Array Property
+     const data  = { name: " vivek", skills: ["HTML", "CSS", "JS"]};
+     const {skills: [first, , third ]} = data;
+     console.log(first, third);
+
+    // Q12. Nested Mix
+    const team = {
+      lead: {name: "Rahul", exp: 5},
+      members: ["ravi", "snaha", "priya"]
+    };
+    const {
+      lead: {name: leader},
+      members:[M1, ,M3]
+      } = team ;
+      console.log(leader ,M1, M3)
+    
+      // D. Spread Operator Advanced Questions
+    //Q13. Merge Multiple Arrays
+
+    const v = [1, 2];
+     const s = [1, 2];
+      const r = [1, 2];
+      const merged = [...v, ...s, ...r];
+
+      console.log(merged);
+
+
+      //Q16. Shallow Copy vs Deep Copy
+const dev = { name: "Amit", skills: ["JS", "React"] };
+const copy = { ...dev };
+
+copy.skills.push("Node");
+console.log(dev.skills);
+
+//Q17. Remove Property Using Spread
+     
+  constemp = { id: 1, name: "Ravi", role: "Dev"};
+  const { role, ...updateEmp1 } = constemp;
+  console.log(updateEmp1);
+
+  //E. Function Parameter Destructuring
+//Q18. Array Parameter Destructuring
+function sum1([a, b]) {
+  return a + b;
+}
+console.log(sum1([5, 7]));
+
+//Q19. Object Parameter Destructuring
+function greet1 ({name, age}){
+  console.log(`hello ${name}, you are ${age}`);
+}
+greet1({name: "Sneha", age: 25});
+
+//Q20. Nested Parameter Destructuring
+
+ function printUser({ info:{ city,pin}}){
+  console.log(city, pin);
+ }
+ printUser({info: {city: "Indore", pin:452001}});
+
+// F. Tricky Edge Case Questions
+//Q21. Default + Rest Together
+
+const [f = 1, , h= 2,  ...rest1] = [10];
+console.log(a, b, rest1);
+
+//Q22. Using Spread in Function Calls
+const arrww = [1, 2, 3];
+console.log(Math.max(...arrww));
+
+//Q23. Combining Spread + Destructuring
+const value = [1, 2, 3, 4];
+const [fires, ...rest2] = [...value, 5, 6]
+console.log(first, rest2);
+
+//Q24. Dynamic Property Name with Spread
+const key2 = "city"
+const obj3 = {name: "Ravi"};
+const update = {...obj, [key]: "Bhopal"};
+console.log(update)
+    </script>
+</body>
+</html

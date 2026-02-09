@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            border: 3px solid black;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: aqua;
+
+        }
+
+        #list{
+     
+            font-weight: 900;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- box ko body me rakha -->
+    <div id="box">Container</div>
+
+    <ul id="list"></ul>
+
+    <ul id="list1">
+        <li>One</li>
+        <li>Two</li>
+    </ul>
+
+    <script>
+        // document.createElement()
+        let div = document.createElement("div");
+        div.textContent = "I am new!";
+        console.log(div);
+        document.body.appendChild(div);
+
+        // appendChild()
+        let para = document.createElement("p");
+        para.textContent = "This is a paragraph.";
+        document.getElementById("box").appendChild(para);
+        //prepend()
+       let lit = document.createElement("li")
+       lit1.textContent = "New First Item";
+       let erg = document.getElementById("list1")
+         erg.prepend(li,lit1)
+       
+
+
+       //insertBefore(newNode, referenceNode)
+let li = document.createElement("li")
+li.textContent = "Inserted Before Two";
+
+let list = document.getElementById("list");
+let ref = list.children[1]; 
+list.insertBefore(li, ref);
+
+    </script>
+
+</body>
+</html>

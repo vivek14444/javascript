@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array Kya Hai?
+        let fruits = ["apple", "banana", "mango", "orange"]
+       console.log(fruits[3])
+        console.log(fruits[1])
+
+        //. Array ke Types (JavaScript me)
+        //1 Simple / Homogeneous Array
+        let num = [10, 20, 30, 40]
+        console.log(num[2])
+
+        //2 Mixed / Heterogeneous Array
+        let mixed = [1, "hello", true, {name: "vivek"},[10,20]];
+        console.log(mixed[4][1])
+
+       // 3 Multidimensional Array
+       let matrix = [
+        [1,2,3],
+        [3,5,6]
+       ]
+        console.log(matrix[1][2])
+
+        //4 Sparse Array
+        let sparse = [2, ,3];
+        console.log(sparse[0])
+
+       //5 Typed Arrays (Advanced) 
+         let types = new Int16Array([10, 20, 30, 40])
+         console.log(types[3])
+
+     //Array ka Use Kyu Karte Hain?
+     let student1 = ["Amit", "Vivek", "Ankit", "Anil"]  
+      console.log(student1[2]) 
+      student1.push("Sumit")
+      console.log(student1)
+
+      student1.unshift("shankar")
+      console.log(student1)
+
+      student1.pop()
+      console.log(student1)
+
+      student1.shift()
+      console.log(student1)
+
+      //Searching Elements (Value Based)
+      let num1 = [ 10, 20, 30, 40, 50, ]
+      console.log(num1.indexOf(50))
+
+      let num2 = [ 10, 20, 30, 40, 50, ]
+      console.log(num2.lastIndexOf(40))
+
+      num2.includes()
+      console.log(num2.includes(30));
+      console.log(num2.includes(60));
+
+      // Searching Elements (Condition Based)
+       let ages = [15, 18, 35, 56]
+      console.log(ages.find(ages =>56))
+
+       let ages1 = [15, 18, 35, 56]
+       console.log(ages1.findIndex(ages1=> ages1> 18))
+
+      //Transforming Arrays
+      let numbers = [1, 2, 3, 4,]
+      let doubled = numbers.map (n => n*3);
+      console.log(doubled); 
+      
+      let even = numbers.filter(n => n % 4 === 0)
+      console.log(even)
+
+      let sum1 = numbers.reduce((acc, curr) => acc + curr,0)
+      console.log(sum1);
+
+       
+      let concatRight = ["a","b","c"].reduceRight((acc, curr) => acc + curr);
+     console.log(concatRight);
+
+      numbers.forEach(n => console.log(n * n));
+
+      // Modifying Arrays
+      let fruits2 = ["Apple", "banana", "mango"]
+      fruits2.splice(1, 1, "Orange", "Papaya");
+      console.log(fruits2)
+
+      let citrus = fruits.slice(1, 3);
+      console.log(citrus)
+
+      // Sorting & Reversing
+      let scores = [50, 10, 5, 20]
+      scores.sort((a,b) => a - b)
+      console.log(scores)
+
+       scores.reverse();
+       console.log(scores);
+
+       //. Joining & String Conversion
+
+       let letters = ["a", "b", "c"];
+
+       console.log(letters.join("-"));
+
+      letters.toString()
+      console.log(letters.toString())
+    </script>
+</body>
+</html>

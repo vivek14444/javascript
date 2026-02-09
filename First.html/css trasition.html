@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            transition: 0.3s;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        .b{
+            display: flex;
+            gap: 40px;
+            
+        }
+        .anki{
+            height: 100px;
+            width: 100px;
+            background-color: blanchedalmond;
+            align-items: center;
+            justify-content: center;
+            
+        }
+         .anki:hover{
+           background-color: blueviolet;
+        }
+        .c{
+            display: flex;
+            gap: 40px;
+
+        }
+        .king{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(255, 252, 205);
+            align-items: center;
+            justify-content: center;
+            transition-duration: 10s;
+        }
+        .king:hover{
+            background-color: aqua;
+        }
+
+        .anku{
+             height: 100px;
+            width: 100px;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            transition-timing-function: ease-in-out;
+        }
+        .anku:hover{
+            transform: translate(300px);
+        }
+        
+       .ll{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        display: flex;
+        border: 2px solid black;
+        margin: 10px;
+        transition-delay: 0.2s;
+       }
+         .ll:hover{
+            transform: scale(1.5);
+         }   
+        .nnn{
+            display: flex;
+            gap: 40px;
+        }
+         .aaa{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            border: 2px solid black;
+            transition-timing-function: linear;
+             }
+          .aaa:hover{
+
+          }
+         .vivo{
+             display: flex;
+            gap: 40px;
+         }
+         .oppo{
+             height: 100px;
+            width: 100px;
+            background-color: rgb(137, 205, 19);
+            border: 2px solid black;
+            transition-timing-function: ease;
+            border-radius: 50%;
+         }
+         .oppo:hover{
+            transform: translate(200px);
+         }
+        .vvc{
+            display: flex;
+            gap: 40px;
+        }
+        .vcv{
+             height: 100px;
+            width: 100px;
+            background-color: rgb(19, 205, 205);
+            border: 2px solid black;
+              transition-timing-function: ease-in;
+        }
+        .vcv:hover{
+            transform: translateY(100px);
+        }
+        .nnc{
+            display: flex;
+            gap: 40px;
+        }
+
+        .ncn{
+              height: 100px;
+            width: 100px;
+            background-color: rgb(210, 124, 229);
+            border: 2px solid black;
+              transition-timing-function: ease-out;
+        }
+        .ncn:hover{
+            transform: translateY(200px);
+        }
+
+        .pop{
+            display: flex;
+            gap: 40px
+        }
+
+        .ppo{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(210, 243, 23);
+            border: 2px solid black;
+              transition-timing-function: ease-in-out;
+        }
+        .ppo:hover{
+  transform: scaleY(2);
+        }
+        .ghg{
+            display: flex;
+            gap: 40px
+        }
+        .hhg{
+             height: 100px;
+            width: 100px;
+            background-color: rgb(172, 228, 181);
+            border: 2px solid black;
+              transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .hhg:hover{
+            transform: perspective(500px) rotateX(45deg);;
+        }
+        .box {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+      margin: 10px;
+      display: inline-block;
+      transition-property: transform;
+    }
+      .slow {
+      transition-duration: 5s;
+    }
+    .fast {
+      transition-duration: 200ms;
+    }
+    .box:hover {
+      transform: scale(1.5);
+    }
+    .kll{
+        background-color: rgb(147, 61, 227);
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        display: inline-block;
+    }
+    .fog{
+        animation-duration: 5s;
+    }
+   @keyframes move {
+    0% {transform: translate(0);}
+    100% {transform: translateX(200px);}
+   }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>transition shorthand Examples</h1>
+        <p>Ek line me saare transition properties set karta hai</p>
+    </div>
+
+    <div class="a">
+        <div class="box"></div>
+    </div>
+
+    <div>
+        <h1>transition-property</h1>
+        <p>Kaunse property par transition lagegi</p>
+    </div>
+
+    <div class="b">
+        <div class="anki">All</div>
+        <div class="anki">Background</div>
+        <div class="anki">Transform</div>
+        <div class="anki">Opacity</div>
+    </div>
+
+    <div>
+        <h1>transition-duration</h1>
+        <p>Transition hone me kitna time lage</p>
+    </div>
+     
+
+    <div class="c">
+        <div class="king">A</div>
+        <div class="king">B</div>
+        <div class="king">C</div>
+        <div class="king">D</div>
+    </div>
+
+    <div>
+        <h1>transition-timing-function</h1>
+        <p>Transition ka speed pattern decide kare</p>
+    </div>
+
+    <div class="d">
+        <div class="anku">linear</div>
+        <div class="anku">case</div>
+        <div class="anku">case.in</div>
+        <div class="anku">case.out</div>
+        <div class="anku">case-in-out</div>
+        <div class="anku">cunie-bezeir</div>
+        <div class="anku">stepts(5)</div>
+    </div>
+
+
+    <div>
+        <h1>transition-delay</h1>
+        <p>Transition start hone se pehle ka delay</p>
+    </div>
+
+    <div class="vivek">
+        <div class="ll">0s</div>
+        <div class="ll">1s</div>
+    </div>
+ 
+    <div>
+        <h1>linear</h1>
+        <p>Start se end tak same speed, koi slow/fast change nahi</p>
+    </div>
+
+    <div class="nnn">
+        <div class="aaa">A</div>
+        <div class="aaa">B</div>
+        <div class="aaa">C</div>
+    </div>
+       
+
+    <div>
+        <h1>ease (default)</h1>
+        <p>Start thoda slow, beech me fast, end me slow</p>
+    </div>
+  
+    <div class="vivo">
+        <div class="oppo">1</div>
+        <div class="oppo">2</div>
+    </div>
+
+    <div>
+        <h1>ease-in</h1>
+        <p>Start slow, end fast</p>
+    </div>
+
+    <div class="vvc">
+        <div class="vcv">1</div>
+        <div class="vcv">2</div>
+    </div>
+
+    
+    <div>
+        <h1>ease-out</h1>
+        <p>Start fast, end slow</p>
+    </div>
+
+    <div class="nnc">
+        <div class="ncn">1</div>
+        <div class="ncn">2</div>
+    </div>
+
+     <div>
+        <h1>ease-in-out</h1>
+        <p>Start slow, beech me fast, end slow</p>
+    </div>
+
+    <div class="pop">
+        <div class="ppo">1</div>
+        <div class="ppo">2</div>
+    </div>
+
+    <div>
+        <h1>cubic-bezier(p1, p2, p3, p4)</h1>
+        <p>Apna custom speed pattern bana sakte ho</p>
+    </div>
+
+    <div class="ghg">
+        <div class="hhg">A</div>
+        <div class="hhg">B</div>
+    </div>
+
+    <div>
+    <h1>@keyframes</h1>
+    <p>Animation ke frames define karta hai
+</p>
+    </div>
+
+    <div class="bpo">
+    <div class="box slow"></div>
+    <div class="box fast"></div>
+    </div>
+
+    <div>
+        <h1>animation-duration</h1>
+        <p>Animation ka total time</p>
+    </div>
+
+    <div class="kll">
+        <div class="fog"></div>
+        <div class="fog"></div>
+    </div>
+</body>
+</html>

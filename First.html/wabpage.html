@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florence</title>
+    <style>
+        span{
+            color: rgb(245, 121, 12);
+        }
+        .ss{
+            background-image: url("data:image/jpeg;base64,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");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+             font-style: italic;
+            color: aliceblue;
+            height: 650px ;
+            padding: 40px;
+        }
+        .king{
+            display: flex;
+            gap: 30px;
+            padding-left: 700px;
+
+        }
+       .le{
+        background-color: rgb(237, 241, 245);
+        border-radius: 20px;
+        
+       }
+     button:hover {
+        background-color:rgb(215, 168, 50);
+        font-size: larger;
+    
+     }
+    a {
+        text-decoration: none;
+        
+        
+    }
+    li {
+        list-style: none;
+        padding: zero;
+    }
+    
+    
+
+    </style>
+
+
+    
+</head>
+<body>
+    
+
+    
+<div class="ss">
+     <h1>Florence</h1>
+    <div class="dd">
+    <dd>
+        <ul class="king">
+            <li><a href="#"><span>Web design</span></a></li>
+            <li><a href="#"><span>Mobile</span></a></li>
+            <li><a href="#"><span>Marketing</span></a></li>
+            <li><a href="#"><span>Word Press</span></a></li>
+        </ul>
+    </dd>
+</div>
+   
+    <header><br><br><br>
+        
+        <h1><b>MAKE <span>HTML</span>& <span>CSS</span> WEBSITE<b></b></h1>
+        <p><b>Subscribe Easy Tutorial Youtube Channel to watch more videos on Web development, UL desiging and worlPress development.Press the bell icon for video notification</b></p>
+        <button class="le">learn More</button>
+        <button class="le">Explore</button>
+        
+    
+    </header>
+    </div>
+     
+      
+     
+    
+</body>
+</html>

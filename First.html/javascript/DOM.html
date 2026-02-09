@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main">Document object modal</h1>
+    <input id="a" type="text">
+    <button onclick="save()"> click </button>
+
+  
+
+
+    <script>
+        function save(){
+            let name = document.getElementById("a").value
+            let name1 = document.getElementById("main").innerText
+            console.log(name);
+            console.log(name1);
+           document.getElementById("a").value=name1
+           document.getElementById("main").innerText=name
+        }
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

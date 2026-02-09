@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .a{
+      height: 90px;
+      width: 100%;
+      background-color: rgb(204, 212, 219);
+    padding: 20px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .box{
+      height: 50px;
+      width: 50px;
+      background-color: rgb(9, 230, 230);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      
+    }
+    .bb{
+       height: 90px;
+      
+      background-color: rgb(204, 212, 219);
+    padding: 20px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+
+    }
+    .cc{
+       height: 95px;
+       width: 100%;
+       background-color: rgb(204, 212, 219);
+       display: flex;
+       gap: 10px;
+flex-direction: row;
+align-items: center;
+
+      
+    }
+    .dd{
+      height: 100px;
+      width: 100%;
+        background-color: rgb(204, 212, 219);
+        display: flex;
+        gap: 10px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .ee{
+height:200px;
+      width: 100%;
+        background-color: rgb(204, 212, 219);
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+
+    }
+    .eee{
+      height: 40px;
+      width: 100%;
+      background-color: aqua;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+
+    }
+    .eeee{
+       height: 40px;
+      width: 100%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .eeeee{
+       height: 40px;
+      width: 100%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column;
+       justify-content: center;
+      align-items: center;
+    }
+    
+    .ff{
+        height:200px;
+      width: 100%;
+        background-color: rgb(204, 212, 219);
+        display: flex;
+        gap: 10px;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 25px;
+    }
+    .fff{
+      height: 40px;
+      width: 100%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column-reverse;
+       justify-content: center;
+      align-items: center;
+    }
+    .ffff{
+      height: 40px;
+      width: 100%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column-reverse;
+       justify-content: center;
+      align-items: center;
+    }
+    .fffff{
+      height: 40px;
+      width: 100%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column-reverse;
+       justify-content: center;
+      align-items: center;
+    }
+    .gg{
+      height: 50px;
+      width: 20%;
+      border: 2px solid black;
+      display: flex;
+      gap: 10px;
+      flex-wrap: nowrap;
+      text-align: center;
+      padding: 10px;
+    }
+    .hh{
+      
+      background-color: rgb(204, 212, 219);
+      height: 150px;
+      width: 200px;
+      
+      gap: 10px;
+      display: flex;
+      
+      
+      flex-wrap: wrap;
+      padding: 10px;
+      }
+     
+    .ii{
+      flex-wrap: wrap-reverse;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 150px;
+      width: 250px;
+
+    }
+    .jj{
+          flex-flow: row;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 150px;
+      width: 250px;
+      padding: 10px;
+    }
+    .hh{
+        justify-content: flex-start;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+    }
+    .gg{
+         justify-content: flex-end;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+    }
+    
+  .ii{
+        justify-content: center;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+  }
+  .jj{
+      justify-content: space-between;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .kk{
+    justify-content: space-around;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+  }
+  .ll{
+      justify-content: space-evenly;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+  }
+  .uu{
+     align-items: stretch;
+      display: flex;
+      gap: 10px;
+      background-color: rgb(204, 212, 219);
+      height: 80px;
+      width: 100%;
+      padding: 10px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>display:flex</h1>
+    <p>yeh container block-level hai,poora width le leta hai.</p>
+  </div>
+  <div class="a">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    
+  </div>
+
+  <div class="b">
+    <h1>display:inline-flex</h1>
+    <p>yeh container inline-level hai, sirf content jitna width leta hai.</p>
+  </div>
+
+  <div class="bb">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+  <div class="c">
+    <h1>flex-direction Example</h1>
+    <p>1 row (default)-Left-Right</p>
+  </div>
+
+  <div class="cc">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <div class="d">
+    <h1>2 row-reverse -Right-left</h1>
+  </div >
+    
+  <div class="dd">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    </div>
+
+    <div class="e">
+      <h1>column -top-Bottom</h1>
+    </div>
+
+    <div class="ee">
+      <div class="eee">1</div>
+      <div class="eeee">2</div>
+      <div class="eeeee">3</div>
+      
+    </div>
+
+    <div class="f">
+      <h1>column-reverse - Bottom - Top</h1>
+    </div> 
+    <div class="ff">
+        <div class="fff">1</div>
+      <div class="ffff">2</div>
+      <div class="fffff">3</div>
+    </div>
+
+    <div class="g">
+      <h1>flex-wrap Example</h1>
+      <p>1 nowrap (default)</p>
+    </div>
+    <div class="gg">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      
+    </div>
+    <div>sare boxes ek hi line me hain,overflow ho raha hai.</div>
+
+    <div class="h">
+      <h1>wrap</h1>
+      <p>next line me wrap</p>
+    </div>
+    <div class="hh">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <div>space kam hone par boxes next line me chale gaye.</div>
+
+
+    <div class="i">
+    <h1>wrap reverse</h1>
+    <p>wrap hota hai lekin nayi line upar se start hoti hai </p>
+    </div>
+    <div class="ii">
+    <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    <div>wrap hota hai lekin nayi line upar se start hoti hai</div>
+
+    <div class="j">
+      <h1>flex-direction + flex-wrap ka shorthand</h1>
+      <div class="jj">
+         <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      </div>
+    </div>
+
+    <div class="h">
+      <h1>justify-content</h1>
+      <p>flex-start (default) – start me</p>
+    <div class="hh">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+    <div class="g">
+      <h1>justify-content</h1>
+      <p>flex-end – end me</p>
+    <div class="gg">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+     <div class="i">
+      <h1>justify-content</h1>
+      <p>center – beech me</p>
+    <div class="ii">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+       <div class="j">
+      <h1>justify-content</h1>
+      <p>space-between – equal gap between</p>
+    <div class="jj">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+      <div class="k">
+      <h1>justify-content</h1>
+      <p>space-around – equal gap around</p>
+    <div class="kk">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+    <div class="l">
+      <h1>justify-content</h1>
+      <p>space-evenly – equal gap all</p>
+    <div class="ll">
+       <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    </div>
+
+    <div class="u">
+      <h1>align-items</h1>
+      <p>stretch (default) – fill height</p>
+    <div class="uu">
+       <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function great(){
+            console.log("Hello From Function Declaration!");
+        }
+        great();
+
+        // Function Expression
+        const Expres = function(){
+            console.log("Hello From Function Expression");
+        }
+        Expres();
+
+        //Arrow Function
+        const arrow = () => {
+            console.log("Hello From  Arrow Function");
+        }
+        arrow();
+
+        const add = (a, b) => a + b;   //argument
+        console.log(add(5, 100));
+
+        // Anonymous Function
+        setTimeout(function(){
+            console.log("Hello From Anonymous Function after 1 sec");
+        },1000);
+
+        
+
+        // Parameters
+        function sum(a, b) { //perameter
+        console.log("Sum is:", a + b);
+        }
+        sum(10, 20); //Argument
+
+        // Arguments
+
+        function Argu(name){
+            console.log("Hello", name);
+        }
+        Argu("Vivek");
+        Argu("Rathore");
+
+      //Quick Comparison Table  
+      // Function Declaration
+      function squar(num){
+        console.log(num*num)
+      }
+      squar(3);
+      squar(12);
+
+      function Fuct(n){
+        return (n-5)*(n-4)*(n-3)*(n-2)*(n-1)*(n)
+       
+      }
+       console.log(Fuct(6));
+     // n!=n*(n-1)* (n-2)*.....*1
+
+     function maxOfTwo(a, b){
+        if(a>b){
+            return(a)
+            
+        }
+        else{
+        return(b);
+        }
+       
+     }
+     console.log(maxOfTwo(10, 5));
+
+
+     
+
+      
+
+    </script>
+</body>
+</html>

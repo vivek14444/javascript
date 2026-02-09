@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Global Scope Example
+        let name =" Vivek";
+        function sayName(){
+            console.log("Inside function:", name );
+
+        } 
+        sayName();
+        console.log("Outside function:", name);
+
+
+       
+        // Local Scope Example
+
+        function showAge(){
+            let age = 25; 
+            console.log("Inside function:", age )
+
+        }
+        showAge();
+       // console.log("Outside function:", age);
+
+        // Block Scope Example (let & const)
+        if (true) {
+            let city = "Bhopal";
+            const pin = 461041;
+            console.log(city,pin); 
+        }
+
+
+      // Example
+        
+       
+        // Function Scope Example (var)
+        if (true){
+            var country = "India";
+
+        }
+        console.log(country);
+
+        // Scope Chain Example
+        let globalVar = "I am Global";
+
+        function outer(){
+            let outerVar = "I am Outer";
+            function inner(){
+                let innerVar = "I am inner";
+
+                console.log(innerVar);
+                console.log(outerVar);
+                console.log(globalVar);
+            }
+            inner();
+        }
+outer();
+
+     function hide(){
+       
+        if(true){
+            // let num = 23
+            num = 30
+        }
+        console.log(num)
+     }
+     hide();
+
+    </script>
+</body>
+</html>

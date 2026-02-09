@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<button id="btn" ondbclick=" onclickevent()">click me</button><br><br>
+
+<button onmousedown="press()" >find</button><br><br>
+
+<button onmouseover="find()"> press</button><br><br>
+
+<button onmouseout="Click()">Click Me</button><br><br>
+
+<input onkeyup="click1()" type="text" name="Name" id="name"/><span class="error" id="error-name"></span><br>
+
+<button onClick="sumbits()">Click Me</button>
+
+<form Id="myForm" onsubmit="sumbitHandler(event)">
+    <input type="text" id="text"
+    oninput="inputHandler(this.value)"
+    onfocus="focusHandler()"
+    onblur="blurHandler()"
+    placeholder="Type your name"/><br><br>
+
+  <select id="select" onchange="changeHandler(this.value)">
+    <option value="">--Select Game--</option>
+    <option value="Cricket">Cricket</option>
+    <option value="Kabbadi">Kabbadi</option>
+    <option value="Kho-Kho">Kho-Kho</option>
+</select> <br><br> 
+
+
+    <button type="submit">Submit</button>
+</form>
+<p id="output"></p>
+
+<body>
+    <script>
+    function onclickevent(){
+       btn.addEventListener("click",() => alert("Clicked!")) 
+    }
+
+    function press(){
+        alert("down")
+    }
+    function find(){
+        alert("press")
+    }
+
+    function Click(){
+        alert("Clicks Me")
+    }
+
+    //Keyboard Events
+
+     function sumbits(){
+       // alert("vivek");
+        let function1 = document.getElementById("name").value;
+
+        if(function1==""){
+        document.getElementById("error-name").innerText ="please eneter the name " 
+
+        document.getElementById("error-name").style.color = "red"
+
+    }
+}
+    function click1(){
+         let function1 = document.getElementById("name").value;
+      if(function1===""){
+        document.getElementById("error-name").innerText = "please enter the name2"
+        }
+         else{
+        document.getElementById("error-name").innerText =""
+      }
+       }
+        
+        function sumbitHandler(e){
+         e.preventDefault();
+         
+         document.getElementById("output").innerText = "myFrom"
+           }
+
+           function changeHandler(value){
+            document.getElementById("output").innerText ="Selected: " + value;
+
+           }
+
+           
+        
+
+    </script>
+</body>
+</html>

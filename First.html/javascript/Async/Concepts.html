@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //   1. Pure Function 
+     function add(a, b){
+        return a + b;
+     }
+     console.log(add(3, 6));
+     console.log(add(2, 4));
+
+    // 2. Higher-Order Function (HOF)
+       function greet(fn){
+        fn();
+       }
+       greet(() => console.log("Hello Vivek"));
+
+    //    3. Currying (Step by Step Function Call)
+    const multiply = a => b => a * b;
+    const double = multiply(6);
+    console.log(double(5));
+    console.log(double(10));
+
+    // 4. Immutability (Original Data ko Change na karna)
+       const cart = ["Apple", "Banana"];
+       const newCart = [...cart, "Orange"];
+       console.log(cart);
+       console.log(newCart);
+
+   
+
+
+    </script>
+</body>
+</html>

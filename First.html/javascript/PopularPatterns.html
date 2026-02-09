@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // 1️⃣ Module Pattern
+      const Counter = (function () {
+  let count = 0; // private
+  function increment() {
+    count++;
+    console.log("Count:", count);
+  }
+  return { inc: increment }; // public API
+})();
+Counter.inc()
+Counter.inc()
+
+// 2️⃣ Singleton Pattern
+class DB {
+    constructor(){
+        if (DB.instance) return  DB.instance
+        DB.instance = this
+        this.time = new Date();
+    }
+}
+const db1 = new DB();
+const db2 = new DB();
+console.log(db1 === db2);
+
+// 3️⃣ Factory Pattern
+function createUser(name, role) {
+  return {
+    name,
+    role,
+    describe() {
+      console.log(`${this.name} is a ${this.role}`);
+    }
+  };
+}
+const u1 = createUser("Amit", "Admin");
+const u2 = createUser("Neha", "Customer");
+u1.describe(); // Amit is a Admin
+u2.describe(); 
+
+
+    </script>
+</body>
+</html>

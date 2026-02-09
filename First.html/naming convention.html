@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --PRIMARY_COLOR:blue;
+        }
+        .A{
+            border: 2px solid black;
+        }
+        .button--large{
+            background-color: blanchedalmond;
+            color: var(--PRIMARY_COLOR);
+            padding: 10px;
+            border: none;
+            font-size: 20px;
+
+        } 
+        .button__label{
+            font-size: 20px;
+            color: aqua;
+        }
+        .button__icon{
+        
+            font-size: 20px;
+        }
+        .B{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+        .main{
+            height: 30px;
+            
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+        .name-hearder{
+            font-size: 20px;
+            color: brown;
+        }
+        .footer__link{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .section__highlight{
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="A">
+    <h1>BEM – Block Element Modifier</h1>
+    <p>Block = independent component</p>
+    <p>Element = Block ka part</p>
+    <p>Modifier = Block ya Element ka variation/style change</p>
+    
+    <button class="button--large">
+        <span class="button__icon">✅</span>
+        <span class="button__label">Click me</span>
+
+    </button>
+     </div>
+
+     <div class="B">
+        <h1>Kebab-case (CSS classes)</h1>
+        <p>Words ko - se separate karte hain</p>
+   <main class="main">
+     <header class="name-hearder">Words ko - se separate karte hain</header>
+   </main>
+    </div>
+
+    <footer>
+        <a href="#" class="footer__link">home</a>
+    </footer>
+
+    <section>
+        <a href="#" class="section__highlight" >About</a>
+    </section>
+</body>
+</html>
